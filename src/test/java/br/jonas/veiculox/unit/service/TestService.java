@@ -1,4 +1,4 @@
-package br.jonas.veiculox.service;
+package br.jonas.veiculox.unit.service;
 
 import br.jonas.veiculox.TesteBase;
 import br.jonas.veiculox.brand.domain.Brand;
@@ -6,7 +6,6 @@ import br.jonas.veiculox.brand.domain.repository.BrandRepository;
 import br.jonas.veiculox.brand.service.BrandService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -27,11 +26,6 @@ class TestService extends TesteBase {
                 .thenReturn(Brand.builder().id(9999L).name("bmw").build());
     }
 
-    /**
-     * Verifica se a entidade foi salva pela serviço;
-     * Camada de repositório é simulada, nada é salvo no banco;
-     * Feito uma verificação se o save do repositório é chamada;
-     */
     @Test
     void shouldSaveBrandAndVerifyIfCalledSaveMethodOnRepository() {
         Brand brand = Brand.builder()

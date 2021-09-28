@@ -1,4 +1,4 @@
-package br.jonas.veiculox.repository;
+package br.jonas.veiculox.unit.repository;
 
 import br.jonas.veiculox.TesteBase;
 import br.jonas.veiculox.brand.domain.Brand;
